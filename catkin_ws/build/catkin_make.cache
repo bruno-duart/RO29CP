@@ -1,0 +1,2 @@
+my_robot
+-DCATKIN_DEVEL_PREFIX=/home/brunoduarte/Documentos/RO29CP/RO29CP/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/brunoduarte/Documentos/RO29CP/RO29CP/catkin_ws/install -G Unix Makefiles
