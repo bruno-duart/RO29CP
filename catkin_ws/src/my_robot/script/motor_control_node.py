@@ -23,11 +23,11 @@ class Motor:
         self.v_motor_left  = Float64()
         self.rate = rospy.Rate(1) #1 Hz
 
-    def cmd_update(self, msg):
+    def cmd_update(self, msg): # atualiza o comando enviado ao motor
         self.command.data = msg.data
         rospy.loginfo(f"command: {self.command.data}")
     
-    def status_update(self, msg):
+    def status_update(self, msg): # atualiza a leitura do sensor
         self.status.data = msg.data
         rospy.loginfo(f"Colisão detectada? {self.status.data}")
 
@@ -35,27 +35,27 @@ class Motor:
         
         while not rospy.is_shutdown():
             
-            if not self.status.data:
+            if not self.status.data: # Se não houver resposta positiva sobre colisão, o motor funciona
                 if self.command.data == "forward":
-                    # avancar
+                    # avançar
                     self.v_motor_right.data  = MAX_VEL_RIGHT
                     self.pub_right.publish(self.v_motor_right)
                     self.v_motor_left.data  = MAX_VEL_LEFT
                     self.pub_left.publish(self.v_motor_left)
                 elif self.command.data == "right":
-                    # virar a direita
+                    # virar à direita
                     self.v_motor_right.data  = MAX_VEL_RIGHT/4
                     self.pub_right.publish(self.v_motor_right)
                     self.v_motor_left.data  = MAX_VEL_LEFT
                     self.pub_left.publish(self.v_motor_left)
                 elif self.command.data == "left":
-                    # virar a direita
+                    # virar à esquerda
                     self.v_motor_right.data  = MAX_VEL_RIGHT
                     self.pub_right.publish(self.v_motor_right)
                     self.v_motor_left.data  = MAX_VEL_LEFT/4
                     self.pub_left.publish(self.v_motor_left)
                 elif self.command.data == "backward":
-                    # virar a direita
+                    # marcha ré
                     self.v_motor_right.data  = -MAX_VEL_RIGHT
                     self.pub_right.publish(self.v_motor_right)
                     self.v_motor_left.data  = -MAX_VEL_LEFT
@@ -68,11 +68,12 @@ class Motor:
                     self.pub_left.publish(self.v_motor_left)
                 rospy.loginfo(f"ML: {self.v_motor_left} -- MR: {self.v_motor_right}")
             else:
-                # desliga os motores
+                # desliga os motores por colisão
                 self.v_motor_right.data  = 0.0
                 self.pub_right.publish(self.v_motor_right)
                 self.v_motor_left.data  = 0.0
                 self.pub_left.publish(self.v_motor_left)
+            
             # para o programa por 1s
             self.rate.sleep()
 
