@@ -25,15 +25,17 @@ class Motor:
 
     def cmd_update(self, msg):
         self.command.data = msg.data
+        rospy.loginfo(f"command: {self.command.data}")
     
     def status_update(self, msg):
         self.status.data = msg.data
+        rospy.loginfo(f"Colisão detectada? {self.status.data}")
 
     def start(self):
         
         while not rospy.is_shutdown():
             
-            if self.status.data:
+            if not self.status.data:
                 if self.command.data == "forward":
                     # avancar
                     self.v_motor_right.data  = MAX_VEL_RIGHT
@@ -64,14 +66,13 @@ class Motor:
                     self.pub_right.publish(self.v_motor_right)
                     self.v_motor_left.data  = 0.0
                     self.pub_left.publish(self.v_motor_left)
-                rospy.loginfo(f"command: {self.command.data} - ML: {self.v_motor_left} - MR: {self.v_motor_right}")
+                rospy.loginfo(f"ML: {self.v_motor_left} -- MR: {self.v_motor_right}")
             else:
                 # desliga os motores
                 self.v_motor_right.data  = 0.0
                 self.pub_right.publish(self.v_motor_right)
                 self.v_motor_left.data  = 0.0
                 self.pub_left.publish(self.v_motor_left)
-                rospy.loginfo(f"Parada por colisao. Desligando motores")
             # para o programa por 1s
             self.rate.sleep()
 
