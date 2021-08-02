@@ -12,6 +12,7 @@ class Control_two_tb3: # declaração da classe de controle
         self.pub_tb3_1 = rospy.Publisher("tb3_0/cmd_vel", Twist, queue_size=10)
         self.pub_tb3_2 = rospy.Publisher("tb3_1/cmd_vel", Twist, queue_size=10)
 
+        self.sleep_rate = rospy.Rate(1) #Hz
         self.twist = Twist()
 
     def update_vel(self, msg): # atualização de velocidades
@@ -21,6 +22,7 @@ class Control_two_tb3: # declaração da classe de controle
         while not rospy.is_shutdown():
             self.pub_tb3_1.publish(self.twist)
             self.pub_tb3_2.publish(self.twist)
+            self.sleep_rate.sleep()
 
 if __name__=="__main__":
     try:
