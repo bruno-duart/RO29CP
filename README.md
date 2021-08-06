@@ -4,6 +4,14 @@
 
 Atividades desenvolvidas na disciplina Robótica Móvel, do curso de Engenharia de Computação da UTFPR campus Pato Branco.
 
+## Requisitos
+
+<ul>
+    <li> Sistema operacional Linux - Meu SO é o Ubuntu 20.04 LTS </li>
+    <li> Ambiente de programação Python (preferencialmente a partir do Python 3.6) </li>
+    <li> Instalação do Ambiente ROS</li>
+</ul>
+
 O diretório /catkin_ws refere-se ao *workspace* do ambiente ROS.
 
 A disciplina é estruturada utilizando as linguagens de programação C++ e Python. Este repositório contém somente códigos em Python, localizados na pasta /catkin/src.
