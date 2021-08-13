@@ -40,4 +40,4 @@ Para executar o desafio 1 seguir os seguintes passos no terminal Linux:
     
 ## Referências
 
-- 2021. Arthur H. D. Nunes. **O guia prático e introdutório de simulações em robótica com ROS**
+- Arthur H. D. Nunes. **O guia prático e introdutório de simulações em robótica com ROS**. 2021
