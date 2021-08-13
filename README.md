@@ -1,7 +1,5 @@
 # RO29CP
 
-(Arquivo em construção)
-
 Atividades desenvolvidas na disciplina Robótica Móvel, do curso de Engenharia de Computação da UTFPR campus Pato Branco.
 
 ## Requisitos
@@ -19,3 +17,17 @@ A disciplina é estruturada utilizando as linguagens de programação C++ e Pyth
 O script para o exercício 1 da disciplina pode ser encontrado em /catkin/src/my_robot/script, com o nome **motor_control_node.py**.
 
 O script para o exercício 2 da disciplina pode ser encontrado em /catkin/src/interact_two_tb3/script, com o nome **control_two_tb3.py**.
+
+O script para o exercício 3 da disciplina pode ser encontrado em /catkin_ws/src/desafio1_tb3_siga_o_mestre/src/script/, com o nome **position_control_TB3.py**.
+
+## Instalação e Uso
+
+Para tutorial de instalação do ROS, configuração de workspace e criação de pacotes, seguir o passo a passo no [vídeo](https://www.youtube.com/watch?v=Fg-58etXqeo&list=PL55DJi5ukTqtD9UyH_XhRba23xZykOYdb&index=1&ab_channel=JefersonLima).
+
+Para executar os projetos seguir os seguintes passos no terminal Linux:
+
+    $
+    $
+    $
+    $
+    
