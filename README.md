@@ -3,8 +3,8 @@
 Atividades desenvolvidas na disciplina Robótica Móvel, do curso de Engenharia de Computação da UTFPR campus Pato Branco.
 
 Membros:
-    - Bruno Duarte
-    - Fabio Henrique Kurpel
+- Bruno Duarte
+- Fabio Henrique Kurpel
 
 ## Organização dos Arquivos
 
