@@ -21,9 +21,9 @@ O script para o exercício 3 da disciplina pode ser encontrado em /catkin_ws/src
 ## Requisitos
 
 <ul>
-    <li> Sistema operacional Linux - Meu SO é o Ubuntu 20.04 LTS </li>
-    <li> Ambiente de programação Python (preferencialmente a partir do Python 3.6) </li>
-    <li> Instalação do Ambiente ROS</li>
+    <li> Sistema operacional Linux - Meu SO é o Ubuntu 20.04 LTS; </li>
+    <li> Ambiente de programação Python (preferencialmente a partir do Python 3.6); </li>
+    <li> Instalação do Ambiente ROS; </li>
 </ul>
 
 ## Instalação e Uso
