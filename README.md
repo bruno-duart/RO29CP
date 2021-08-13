@@ -2,6 +2,10 @@
 
 Atividades desenvolvidas na disciplina Robótica Móvel, do curso de Engenharia de Computação da UTFPR campus Pato Branco.
 
+Membros:
+    - Bruno Duarte
+    - Fabio Henrique Kurpel
+
 ## Organização dos Arquivos
 
 O diretório /catkin_ws refere-se ao *workspace* do ambiente ROS.
@@ -28,7 +32,9 @@ Para tutorial de instalação do ROS, configuração de workspace e criação de
 
 Para executar o desafio 1 seguir os seguintes passos no terminal Linux:
 
-    $ cd ~/catkin_ws
+    $ cd catkin_ws
+    $ source devel/setup.bash
+    $ export TURTLEBOT3_MODEL=burger
     $ roslaunch desafio1_tb3_siga_o_mestre position_control_TB3.py
     $ roslaunch desafio1_tb3_siga_o_mestre two_tb3.launch
     
