@@ -38,3 +38,6 @@ Para executar o desafio 1 seguir os seguintes passos no terminal Linux:
     $ roslaunch desafio1_tb3_siga_o_mestre position_control_TB3.py
     $ roslaunch desafio1_tb3_siga_o_mestre two_tb3.launch
     
+## Referências
+
+- 2021. Arthur H. D. Nunes. **O guia prático e introdutório de simulações em robótica com ROS**
