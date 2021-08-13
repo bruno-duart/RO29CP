@@ -62,7 +62,7 @@ class TurtleControl:
         """ref_pose = Pose()
         ref_pose.x = x_ref
         ref_pose.y = y_ref"""
-        ref_tol = 0.01
+        ref_tol = 0.1
         vel_msg = Twist()
         while self.ref_distance(self.pose0) >= ref_tol:
             vel_msg.linear.x = self.linear_vel_control(self.pose0)
