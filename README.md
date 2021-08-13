@@ -35,8 +35,8 @@ Para executar o desafio 1 seguir os seguintes passos no terminal Linux:
     $ cd catkin_ws
     $ source devel/setup.bash
     $ export TURTLEBOT3_MODEL=burger
-    $ roslaunch desafio1_tb3_siga_o_mestre position_control_TB3.py
     $ roslaunch desafio1_tb3_siga_o_mestre two_tb3.launch
+    $ roslaunch desafio1_tb3_siga_o_mestre position_control_TB3.py
     
 ## Referências
 
